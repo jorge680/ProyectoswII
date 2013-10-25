@@ -1,0 +1,63 @@
+<div id="logo-login">
+		<a>SISTEMA DE EVALUACIÓN DOCENTE</a>
+
+	</div>
+	<!-- end logo -->
+	
+	<div class="clear"></div>
+	
+	<!--  start loginbox ................................................................................. -->
+	<div id="loginbox">
+	
+	     <!--  start login-inner -->
+	   <div id="login-inner">
+	   <table border="0" cellpadding="0" cellspacing="0">
+	   <tr>
+			<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+			<th>Usuario</th>
+			<td><%= f.email_field :email, :autofocus => true, :class => 'login-inp', :required => 'required' %><td>
+
+		</tr><tr>
+			<th>Contraseña</th>
+			<td><%= f.password_field :password, :class => 'login-inp', :onfocus => "this.value=''", :required => 'required' %></td>
+
+		</tr><tr>
+			<th></th>
+			<td valign="top"><%= f.check_box :remember_me %> <%= f.label 'Recuérdame' %></td>
+
+		</tr><tr>
+	    <th></th>
+            <td><%= f.submit "Sign in", :class => 'submit-login' %></td>
+			<% end %>
+		</tr>
+		</table>
+	</div>
+ 	<!--  end login-inner -->
+	<div class="clear"></div>
+	<a href="" class="forgot-pwd">¿Olvidó la contraseña?</a>
+ </div>
+ <!--  end loginbox -->
+ 
+	<!--  start forgotbox ................................................................................... -->
+	<div id="forgotbox">
+		<div id="forgotbox-text">Porfavor envíenos su correo y le enviaremos su contraseña</div>
+		<!--  start forgot-inner -->
+		<div id="forgot-inner">
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<th>Correo electrónico</th>
+			<td><input type="text" value=""   class="login-inp" /></td>
+		</tr>
+		<tr>
+			<th> </th>
+			<td><input type="button" class="submit-login"  /></td>
+		</tr>
+		</table>
+		</div>
+		<!--  end forgot-inner -->
+		<div class="clear"></div>
+		<a href="" class="back-login">Volver al login</a>
+	</div>
+
+	<!--  end forgotbox -->
+</div>
